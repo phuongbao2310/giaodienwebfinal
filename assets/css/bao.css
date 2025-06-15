@@ -1,4 +1,4 @@
-/* --- Import Google Fonts --- */
+1/* --- Import Google Fonts --- */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap');
 
 /* --- CSS Variables (Biến CSS cho dễ quản lý) --- */
@@ -22,8 +22,8 @@
     --sidebar-transition-duration: 0.3s;
    --primary-bg: #1a1a1a; /* Hoặc màu nền tổng thể của body nếu không phải đen */
     --secondary-bg: #2a2a2a; /* Màu nền của sidebar và footer hiện tại */
-    --banner-full-bg-color: #333333; /* Màu đen của banner bạn muốn kéo dài */
-    --footer-full-bg-color: var(--secondary-bg); /* Màu xám tối của footer bạn muốn kéo dài */
+    --banner-full-bg-color: #333333; /* Màu đen của banner kéo dài */
+    --footer-full-bg-color: var(--secondary-bg); /* Màu xám tối của footer kéo dài */
 }
 /* --- Theme Switch Toggle --- */
 .theme-switch-wrapper {
@@ -108,23 +108,23 @@ body.contrast-mode .slider {
 body.contrast-mode input:checked + .slider {
     background-color: var(--accent-color); /* Maintain accent color for on state */
 }
-/* Thêm các biến cho chế độ tương phản/sáng hơn */
+
 body.contrast-mode {
     --primary-bg: #f8f8f8; /* Nền chính sáng */
     --secondary-bg: #ffffff; /* Nền phụ rất sáng */
     --text-light: #333333; /* Chữ tối */
     --text-dark: #666666; /* Chữ phụ, hơi xám đậm */
-    --accent-color: #007bff; /* Màu xanh dương làm điểm nhấn (có thể giữ màu xanh ngọc nếu muốn) */
+    --accent-color: #007bff; /* Màu xanh dương làm điểm nhấn */
     --accent-color-light: #6aa8ff; /* Màu xanh dương sáng hơn */
     --border-color: #cccccc; /* Viền sáng */
     --shadow-color: rgba(0, 0, 0, 0.2); /* Shadow nhẹ hơn */
     --light-color: #000000; /* Ánh sáng đen (hoặc giữ trắng nếu muốn) */
     --light-glow-color: rgba(0, 0, 0, 0.5); /* Loe đen */
-    --banner-full-bg-color: var(--primary-bg); /* Hoặc màu #cccccc nếu bạn muốn một màu xám khác cho banner tương phản */
-    --footer-full-bg-color: var(--secondary-bg); /* Hoặc màu #eeeeee nếu bạn muốn khác */
+    --banner-full-bg-color: var(--primary-bg); 
+    --footer-full-bg-color: var(--secondary-bg); 
 }
 
-/* Điều chỉnh một số phần tử cụ thể trong contrast-mode nếu cần */
+
 body.contrast-mode .sidebar-nav {
     border-right-color: var(--border-color);
     box-shadow: 2px 0 10px var(--shadow-color);
@@ -163,13 +163,13 @@ body.contrast-mode .contact-info-item:hover {
 }
 /* Điều chỉnh hiệu ứng ánh sáng trong contrast-mode */
 body.contrast-mode .light-sweep {
-    /* Có thể đổi màu thành đen để nổi bật trên nền sáng */
+
     background: linear-gradient(to right, transparent, var(--text-light), transparent); /* Dùng màu chữ chính */
     animation: flash-glow-animation-contrast var(--light-speed-duration) ease-in-out infinite alternate;
 }
-/* Trong file CSS của bạn */
 
-/* Điều chỉnh nút "Chế độ Chỉnh sửa" trong contrast-mode */
+
+
 body.contrast-mode .global-edit-btn {
     background-color: #e0e0e0; /* Màu nền sáng hơn cho nút */
     color: var(--text-dark);   /* Chữ màu tối */
@@ -192,7 +192,7 @@ body.contrast-mode .global-edit-btn.active:hover {
     background-color: var(--accent-color-light); /* Màu accent sáng hơn khi hover active */
 }
 
-/* Các nút chỉnh sửa nhỏ hơn (edit-btn-section) nếu chúng cũng bị ảnh hưởng */
+
 body.contrast-mode .edit-btn-section {
     background-color: var(--accent-color); /* Hoặc một màu khác nếu bạn muốn khác biệt */
     color: var(--secondary-bg);
@@ -202,7 +202,7 @@ body.contrast-mode .edit-btn-section:hover {
     background-color: var(--accent-color-light);
     box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
 }
-/* Trong file CSS của bạn */
+
 body.contrast-mode .project-item .project-tech-stack li {
     background-color: #e9ecef; /* Nền sáng hơn */
     color: var(--text-dark); /* Chữ tối hơn */
@@ -225,7 +225,7 @@ body.contrast-mode .project-item .project-tech-stack li {
         box-shadow: none;
     }
 }
-/* Trong file CSS của bạn */
+
 body.contrast-mode .banner {
 
 }
@@ -291,7 +291,7 @@ body.contrast-mode .icon-item:hover {
     color: var(--secondary-bg);
 }
 
-/* Điều chỉnh lại màu chữ h1, h2, h3 trong contrast-mode nếu cần, vì mặc định chúng dùng var(--text-light) */
+
 body.contrast-mode h1,
 body.contrast-mode h2,
 body.contrast-mode h3 {
